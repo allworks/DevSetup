@@ -1,0 +1,6 @@
+Edit /etc/environment to change system-wide PATH and other environment variables, 
+Config route to private IP's through NAT adapter (enp0s8, 10.0.3.15):
+route -v
+sudo route del default gw 10.0.3.2
+sudo route add -net 10.0.0.0 netmask 255.0.0.0 gw 10.0.3.2 dev enp0s8
+

@@ -1,0 +1,5 @@
+Config routes to private IP's through NAT adapter (17, 10.0.3.15):
+route print
+route delete 0.0.0.0 mask 0.0.0.0 10.0.3.2
+route -p add 10.0.0.0 mask 255.0.0.0 10.0.3.2 metric 3 if 17
+
