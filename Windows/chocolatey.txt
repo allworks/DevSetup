@@ -1,0 +1,11 @@
+@powershell -NoProfile -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+
+choco install chocolatey
+choco install github --ignore-checksums
+
+choco upgrade chocolatey
+choco upgrade powershell
+
+choco install packages.config -y
+
+Note: v0.10.3 - Install chocolatey will download and install .NET 4.0 if missing. Install github will install AutoHotkey portable and .NET 4.5, which requires a reboot. Install Powershell requires a reboot.

@@ -1,0 +1,5 @@
+block devices: /dev/sda is first disk and /dev/sdb is the second.
+/dev/sdb1 is the first partiion on the second disk.
+use gparted to format the new disk to ext4
+append this line to /etc/fstab:
+/dev/sdb1	/hdd	ext4	defaults	0	2
